@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import DrawingScreen from './components/drawingscreen';
 
 const App: React.FC = () => {
-  const [playerName, setPlayerName] = useState('');
+  const [, setPlayerName] = useState('');
 
   return (
     <div>
-      <DrawingScreen playerName={playerName} setPlayerName={setPlayerName} />
+      <DrawingScreen setPlayerName={setPlayerName} />
     </div>
   );
 };
