@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Pictionary.Hubs;
 
-namespace YourNamespace
+namespace Pictionary
 {
     public class Startup
     {
@@ -11,8 +11,6 @@ namespace YourNamespace
         {
             // Add SignalR services
             services.AddSignalR();
-            
-            // Add other services as needed
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

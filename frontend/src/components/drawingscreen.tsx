@@ -42,6 +42,18 @@ const DrawingContent: React.FC<DrawingContentProps> = ({ connection }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [isDrawing, setIsDrawing] = useState<boolean>(false);
 
+  connection?.on('ReceiveDataPoints', (x: number, y: number) => {
+    console.log(" from the server" , x, y);
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const context = canvas.getContext('2d');
+    if (!context) return;
+
+    context.lineTo(x, y);
+    context.stroke();
+  })
+
   const startDrawing = (event: React.MouseEvent<HTMLCanvasElement>) => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -62,6 +74,10 @@ const DrawingContent: React.FC<DrawingContentProps> = ({ connection }) => {
 
     const context = canvas.getContext('2d');
     if (!context) return;
+
+    // console.log(event.nativeEvent.offsetX, event.nativeEvent.offsetY)
+    // send to signalR
+    connection?.invoke('SendDataPoints', event.nativeEvent.offsetX, event.nativeEvent.offsetY).catch(err => console.error(err));
 
     context.lineTo(event.nativeEvent.offsetX, event.nativeEvent.offsetY);
     context.stroke();
@@ -125,7 +141,7 @@ const DrawingContent: React.FC<DrawingContentProps> = ({ connection }) => {
 const DrawingScreen: React.FC<DrawingScreenProps> = ({ setPlayerName }) => {
   const [name, setName] = useState<string>('');
   const [submitted, setSubmitted] = useState<boolean>(false);
-  const connection = useSignalRConnection('/pictionaryhub');
+  const connection = useSignalRConnection('/r/pictionaryhub');
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

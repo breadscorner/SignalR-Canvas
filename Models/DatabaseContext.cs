@@ -15,6 +15,10 @@ namespace Pictionary.Models
         // DbSet for Guess entity
         public DbSet<Guess> Guesses { get; set; }
 
-        // DbSet for other entities as needed
+        // Optionally, override OnModelCreating method for custom model configurations
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // Configure additional model mappings or configurations here
+        }
     }
 }

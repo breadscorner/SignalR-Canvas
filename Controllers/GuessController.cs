@@ -22,23 +22,23 @@ namespace Pictionary.Controllers
         public IActionResult MakeGuess([FromBody] Guess guess)
         {
             // Check if a drawing session is active
-            if (PictionaryHub.ActiveDrawEntry == null)
-            {
-                return NotFound("No drawing session is active.");
-            }
+            // if (PictionaryHub.ActiveDrawEntry == null)
+            // {
+            //     return NotFound("No drawing session is active.");
+            // }
 
-            // Check if the guess is correct
-            if (guess.GuessedDrawing == PictionaryHub.ActiveDrawEntry.Drawing)
-            {
-                // Notify clients that a correct guess has been made
-                _hubContext.Clients.All.SendAsync("CorrectGuess", guess.GuesserName);
+            // // Check if the guess is correct
+            // if (guess.GuessedDrawing == PictionaryHub.ActiveDrawEntry.Drawing)
+            // {
+            //     // Notify clients that a correct guess has been made
+            //     _hubContext.Clients.All.SendAsync("CorrectGuess", guess.GuesserName);
 
-                return Ok($"Congratulations, {guess.GuesserName}! Your guess is correct.");
-            }
-            else
-            {
+            //     return Ok($"Congratulations, {guess.GuesserName}! Your guess is correct.");
+            // }
+            // else
+            // {
                 return Ok($"Sorry, {guess.GuesserName}, your guess is incorrect.");
-            }
+            // }
         }
     }
 }
