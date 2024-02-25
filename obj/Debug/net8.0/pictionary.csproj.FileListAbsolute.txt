@@ -35,3 +35,4 @@
 /Users/brettgill/Documents/brett-projects/pictionary/bin/Debug/net8.0/frontend/package.json
 /Users/brettgill/Documents/brett-projects/pictionary/bin/Debug/net8.0/frontend/tsconfig.json
 /Users/brettgill/Documents/brett-projects/pictionary/bin/Debug/net8.0/frontend/tsconfig.node.json
+/Users/brettgill/Documents/brett-projects/pictionary/bin/Debug/net8.0/package-lock.json
