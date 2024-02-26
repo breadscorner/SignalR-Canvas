@@ -13,7 +13,16 @@ namespace Pictionary.Hubs
             await Clients.All.SendAsync("DrawingSessionUpdated", drawEntry);
         }
 
-// not used yet
+        public async Task SendDrawingSessionStarted(string participantName)
+        {
+            await Clients.All.SendAsync("DrawingSessionStarted", participantName);
+        }
+
+        public async Task SendDrawingSessionEnded()
+        {
+            await Clients.All.SendAsync("DrawingSessionEnded");
+        }
+
         public async Task SendCorrectGuess(string guesserName)
         {
             await Clients.All.SendAsync("CorrectGuess", guesserName);
