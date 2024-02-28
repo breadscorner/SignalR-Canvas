@@ -1,13 +1,13 @@
 import React from 'react';
 
 interface DrawingDisplayProps {
-  imageData: string;
+  drawingData: string;
 }
 
-const DrawingDisplay: React.FC<DrawingDisplayProps> = ({ imageData }) => {
+const DrawingDisplay: React.FC<DrawingDisplayProps> = ({ drawingData }) => {
   return (
     <div>
-      <img src={imageData} alt="Drawing" />
+      <img src={drawingData} alt="Drawing" />
     </div>
   );
 };

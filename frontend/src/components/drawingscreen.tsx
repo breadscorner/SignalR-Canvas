@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { HubConnection, HubConnectionBuilder } from '@microsoft/signalr';
 
 interface DrawingScreenProps {
-  setPlayerName: React.Dispatch<React.SetStateAction<string>>;
+  setPlayerName: (name: string) => void;
 }
 
 const useSignalRConnection = (hubUrl: string): HubConnection | null => {
