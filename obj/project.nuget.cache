@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k8U2KRLbE8Wi9qUajlE2D9KcRpE3dW6QX9Cyf3VH4EO31Pwoc+PuYRsTDkc8DmJTW0IYNwpCJehCeIaReel5iA==",
+  "dgSpecHash": "LG0Sz3RQTY904St7iNeN4bHvyXljriItvgmj0nr3fL/S8lHw92/fuK9pROVE4rEKrT52iMqwrn6XzufAfg7Ypw==",
   "success": true,
-  "projectFilePath": "/Users/brettgill/Documents/brett-projects/pictionary/pictionary.csproj",
+  "projectFilePath": "/Users/brettgill/Documents/brett-projects/Virtual-Pictionary-C/pictionary.csproj",
   "expectedPackageFiles": [
     "/Users/brettgill/.nuget/packages/dotnetenv/3.0.0/dotnetenv.3.0.0.nupkg.sha512",
     "/Users/brettgill/.nuget/packages/microsoft.entityframeworkcore/8.0.2/microsoft.entityframeworkcore.8.0.2.nupkg.sha512",

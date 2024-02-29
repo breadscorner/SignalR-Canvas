@@ -5263,11 +5263,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/brettgill/Documents/brett-projects/pictionary/pictionary.csproj",
+      "projectUniqueName": "/Users/brettgill/Documents/brett-projects/Virtual-Pictionary-C/pictionary.csproj",
       "projectName": "pictionary",
-      "projectPath": "/Users/brettgill/Documents/brett-projects/pictionary/pictionary.csproj",
+      "projectPath": "/Users/brettgill/Documents/brett-projects/Virtual-Pictionary-C/pictionary.csproj",
       "packagesPath": "/Users/brettgill/.nuget/packages/",
-      "outputPath": "/Users/brettgill/Documents/brett-projects/pictionary/obj/",
+      "outputPath": "/Users/brettgill/Documents/brett-projects/Virtual-Pictionary-C/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/brettgill/.nuget/NuGet/NuGet.Config"
